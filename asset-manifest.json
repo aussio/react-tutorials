@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/react-tutorials/recipe-app-tutorial/build/static/css/main.b438afa5.chunk.css",
+    "main.js": "/react-tutorials/recipe-app-tutorial/build/static/js/main.af897c47.chunk.js",
+    "main.js.map": "/react-tutorials/recipe-app-tutorial/build/static/js/main.af897c47.chunk.js.map",
+    "runtime-main.js": "/react-tutorials/recipe-app-tutorial/build/static/js/runtime-main.19704d62.js",
+    "runtime-main.js.map": "/react-tutorials/recipe-app-tutorial/build/static/js/runtime-main.19704d62.js.map",
+    "static/js/2.c8f85ee2.chunk.js": "/react-tutorials/recipe-app-tutorial/build/static/js/2.c8f85ee2.chunk.js",
+    "static/js/2.c8f85ee2.chunk.js.map": "/react-tutorials/recipe-app-tutorial/build/static/js/2.c8f85ee2.chunk.js.map",
+    "index.html": "/react-tutorials/recipe-app-tutorial/build/index.html",
+    "precache-manifest.d547d2c34b4f27eb79ac1409884d960a.js": "/react-tutorials/recipe-app-tutorial/build/precache-manifest.d547d2c34b4f27eb79ac1409884d960a.js",
+    "service-worker.js": "/react-tutorials/recipe-app-tutorial/build/service-worker.js",
+    "static/css/main.b438afa5.chunk.css.map": "/react-tutorials/recipe-app-tutorial/build/static/css/main.b438afa5.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.19704d62.js",
+    "static/js/2.c8f85ee2.chunk.js",
+    "static/css/main.b438afa5.chunk.css",
+    "static/js/main.af897c47.chunk.js"
+  ]
+}
