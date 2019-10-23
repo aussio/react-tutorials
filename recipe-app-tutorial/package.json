@@ -2,7 +2,7 @@
   "name": "recipe-app-tutorial",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://aussio.github.io/react-tutorials/recipe-app-tutorial/build",
+  "homepage": "https://aussio.github.io/react-tutorials/recipe-app-tutorial",
   "dependencies": {
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
