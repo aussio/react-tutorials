@@ -1,0 +1,35 @@
+.App {
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  display: grid;
+  grid-template-rows: 100px 1fr;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-bar {
+  height: 2em;
+  width: 50%;
+  max-width: 50em;
+  margin: 1em;
+}
+
+.search-button {
+  height: 2em;
+  width: 20%;
+  margin: 1em;
+}
+
+.picture-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.picture-container > * {
+  margin: 1.5em;
+}
