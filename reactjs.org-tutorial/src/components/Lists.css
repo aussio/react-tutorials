@@ -1,0 +1,13 @@
+.List {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0;
+}
+
+.List > li {
+  list-style: none;
+  height: 50%;
+  width: 10%;
+  background-color: sandybrown;
+}

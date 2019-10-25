@@ -1,0 +1,6 @@
+.FilterableProductTable {
+  display: grid;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0px 10px;
+}

@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.App > * {
+  min-height: 100px;
+}
+
+.App > *:nth-child(odd) {
+  background-color: lightblue;
+}
+
+.App > *:nth-child(even) {
+  padding: 10px 0;
+}

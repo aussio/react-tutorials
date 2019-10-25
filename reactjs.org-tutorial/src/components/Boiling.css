@@ -1,0 +1,12 @@
+fieldset {
+}
+
+.Calculator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Calculator p {
+  margin: 5px;
+}

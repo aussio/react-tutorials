@@ -1,0 +1,15 @@
+.Toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Toggle > * {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.Toggle > button {
+  height: 25%;
+  width: 5%;
+}
