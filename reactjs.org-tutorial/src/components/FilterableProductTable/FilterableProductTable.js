@@ -7,6 +7,20 @@ class FilterableProductTable extends React.Component {
   constructor(props) {
     super(props);
     this.state = { filterText: "", inStockOnly: false };
+    this.handleFilterTextChange = this.handleFilterTextChange.bind(this);
+    this.handleInStockChange = this.handleInStockChange.bind(this);
+  }
+
+  handleFilterTextChange(filterText) {
+    this.setState({
+      'filterText': filterText
+    });
+  }
+
+  handleInStockChange(inStockOnly) {
+    this.setState({
+      'inStockOnly': inStockOnly
+    });
   }
 
   render() {
@@ -19,6 +33,8 @@ class FilterableProductTable extends React.Component {
         <SearchBar
           filterText={filterText}
           inStockOnly={inStockOnly}
+          onInStockChange={this.handleInStockChange}
+          onFilterTextChange={this.handleFilterTextChange}
         />
         <ProductTable
           products={products}

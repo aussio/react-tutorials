@@ -2,5 +2,7 @@
   display: grid;
   flex-direction: column;
   justify-content: flex-start;
+  align-content: flex-start;
   margin: 0px 10px;
+  height: 300px;
 }
