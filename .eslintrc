@@ -37,7 +37,10 @@
       "error",
       "ForInStatement",
       "LabeledStatement",
-      "WithStatement",
+      "WithStatement"
     ],
+    "no-use-before-define": [
+      0
+    ]
   }
 }

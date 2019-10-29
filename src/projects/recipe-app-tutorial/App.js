@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import NasaPic from "./NasaPic";
-import { getNasaPicsOfTheWeek } from "./nasaAPI";
+import getNasaPicsOfTheWeek from "./nasaAPI";
 
 function App() {
   const [nasaPics, setNasaPics] = useState([]);
@@ -13,8 +13,14 @@ function App() {
   return (
     <div className="App">
       <form className="search-form">
-        <input className="search-bar" type="text" />
-        <button className="search-button" type="submit">
+        <input
+          className="search-bar"
+          type="text"
+        />
+        <button
+          className="search-button"
+          type="submit"
+        >
           Search
         </button>
       </form>
