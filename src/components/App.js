@@ -49,26 +49,26 @@ class MainNav extends React.Component {
 
     return (
       <nav className={className}>
-        <ul>
-          <li>
-            <Link to={homePath}>Home</Link>
-          </li>
-          <li>
-            <Link to={tutorialProjectsPath}>Tutorial Projects</Link>
-          </li>
-        </ul>
+        <StyledNavLink to={homePath}>Home</StyledNavLink>
+        <StyledNavLink to={tutorialProjectsPath}>Tutorial Projects</StyledNavLink>
       </nav>
     );
   }
 }
 
 const StyledMainNav = styled(MainNav)`
-  background: rgb(219, 112, 147);
+  display: flex;
+  justify-content: flex-start;
 
-  & ul {
-        padding: 0;
-        margin: 0;
-      }
+  background: rgb(219, 112, 147);
+`;
+
+const StyledNavLink = styled(Link)`
+  color: white;
+  font-weight: bold;
+  line-height: 3em;
+  text-decoration: none;
+  margin: 0em 2em;
 `;
 
 function Home() {

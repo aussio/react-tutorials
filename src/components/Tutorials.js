@@ -27,7 +27,7 @@ class Tutorials extends React.Component {
     return (
       <div className={className}>
         <StyledTutorialsNav
-          reactRouterPat={reactRouterPath}
+          reactRouterPath={reactRouterPath}
           dataFetchingPath={dataFetchingPath}
           reactJSOrgPath={reactJSOrgPath}
           nasaPicOfTheDayPath={nasaPicOfTheDayPath}
@@ -72,20 +72,10 @@ class TutorialsNav extends React.Component {
 
     return (
       <nav className={className}>
-        <ul>
-          <li>
-            <Link to={reactRouterPath}>React Router</Link>
-          </li>
-          <li>
-            <Link to={dataFetchingPath}>Data Fetching</Link>
-          </li>
-          <li>
-            <Link to={reactJSOrgPath}>Reactjs.org Tutorial</Link>
-          </li>
-          <li>
-            <Link to={nasaPicOfTheDayPath}>Nasa Pic of the Day</Link>
-          </li>
-        </ul>
+        <StyledNavLink to={reactRouterPath}>React Router</StyledNavLink>
+        <StyledNavLink to={dataFetchingPath}>Data Fetching</StyledNavLink>
+        <StyledNavLink to={reactJSOrgPath}>Reactjs.org Tutorial</StyledNavLink>
+        <StyledNavLink to={nasaPicOfTheDayPath}>Nasa Pic of the Day</StyledNavLink>
       </nav>
     );
   }
@@ -100,8 +90,13 @@ function TutorialsHome() {
 }
 
 const StyledTutorialsNav = styled(TutorialsNav)`
-      background: rgb(239, 239, 239);
+      display: flex;
+      flex-direction: column;
+      align-content: center;
       height: 100vh;
+      padding-top: 2em;
+
+      background: rgb(239, 239, 239);
 
       & ul {
         padding: 0;
@@ -109,9 +104,16 @@ const StyledTutorialsNav = styled(TutorialsNav)`
       }
 `;
 
+const StyledNavLink = styled(Link)`
+  color: black;
+  text-decoration: none;
+  margin: 1em 2em;
+  text-align: left;
+`;
+
 const StyledTutorials = styled(Tutorials)`
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 5fr;
 `;
 
 export default StyledTutorials;
