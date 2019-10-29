@@ -1,0 +1,32 @@
+.App {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 20% auto;
+    height: 100vh;
+}
+
+.App h1 {
+    margin: 30px;
+}
+
+.App > nav {
+    border: 2px solid black;
+}
+
+.Home {
+    background-color: cornflowerblue;
+}
+
+.Search {
+    background-color: darkkhaki;
+}
+
+.About {
+    background-color: darkslategray;
+    color: whitesmoke;
+}
+
+.NotFound {
+    background-color: black;
+    color: whitesmoke;
+}
