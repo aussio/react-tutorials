@@ -3,9 +3,9 @@ import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
-  Link
+  Link,
+  Route
 } from "react-router-dom";
-import ScrollToTopRoute from './ScrollToTopRoute';
 import { Home, About, Search, NoMatch } from './pages';
 
 
@@ -34,23 +34,23 @@ function App() {
         </nav>
 
         <Switch>
-          <ScrollToTopRoute
+          <Route
             exact
             path="/"
             component={Home}
           />
-          <ScrollToTopRoute
+          <Route
             exact
             path="/about"
             component={About}
           />
-          <ScrollToTopRoute
+          <Route
             exact
             path="/search"
             component={Search}
             RouteKey
           />
-          <ScrollToTopRoute
+          <Route
             exact
             component={NoMatch}
           />

@@ -8,6 +8,9 @@ import {
 } from "react-router-dom";
 // Example projects
 import RouterApp from '../projects/react-router/App';
+import DataFetching from '../projects/data-fetching/App';
+import ReactJsOrg from '../projects/reactjs.org-tutorial/App';
+import NasaPics from '../projects/recipe-app-tutorial/App';
 
 function Home() {
   return (
@@ -28,7 +31,16 @@ function App() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/react-router">React-Router</Link>
+              <Link to="/react-router">React Router</Link>
+            </li>
+            <li>
+              <Link to="/data-fetching">Data Fetching</Link>
+            </li>
+            <li>
+              <Link to="/reactjs-org">Reactjs.org Tutorial</Link>
+            </li>
+            <li>
+              <Link to="/nasa-pic-of-the-day">Nasa Pic of the Day</Link>
             </li>
           </ul>
         </nav>
@@ -43,6 +55,21 @@ function App() {
             exact
             path="/react-router"
             component={RouterApp}
+          />
+          <Route
+            exact
+            path="/data-fetching"
+            component={DataFetching}
+          />
+          <Route
+            exact
+            path="/reactjs-org"
+            component={ReactJsOrg}
+          />
+          <Route
+            exact
+            path="/nasa-pic-of-the-day"
+            component={NasaPics}
           />
         </Switch>
       </Router>

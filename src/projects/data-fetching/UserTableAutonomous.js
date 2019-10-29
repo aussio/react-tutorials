@@ -1,6 +1,5 @@
 import React from 'react';
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
-import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 import './Table.css';
 
 const USER_SERVICE_URL = 'https://jsonplaceholder.typicode.com/users';
