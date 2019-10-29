@@ -40,6 +40,10 @@
       "WithStatement"
     ],
     "no-use-before-define": [
+      2,
+      "nofunc"
+    ],
+    "max-classes-per-file": [
       0
     ]
   }

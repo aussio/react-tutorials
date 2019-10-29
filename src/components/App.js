@@ -1,78 +1,80 @@
 import React from 'react';
-import './App.css';
 import {
-  BrowserRouter as Router,
   Switch,
   Link,
-  Route
+  Route,
 } from "react-router-dom";
-// Example projects
-import RouterApp from '../projects/react-router/App';
-import DataFetching from '../projects/data-fetching/App';
-import ReactJsOrg from '../projects/reactjs.org-tutorial/App';
-import NasaPics from '../projects/recipe-app-tutorial/App';
+import styled from 'styled-components';
+
+import StyledTutorials from './Tutorials';
+
+class App extends React.Component {
+
+  homePath = "/"
+
+  tutorialProjectsPath = "/tutorial-projects"
+
+  render() {
+    return (
+      <div>
+        <StyledMainNav
+          homePath={this.homePath}
+          tutorialProjectsPath={this.tutorialProjectsPath}
+        />
+
+        <Switch>
+          <Route
+            exact
+            path={this.homePath}
+            component={Home}
+          />
+          <Route
+            path={this.tutorialProjectsPath}
+            render={() => <StyledTutorials pathPrefix={this.tutorialProjectsPath} />}
+          />
+        </Switch>
+      </div>
+    );
+  }
+}
+
+class MainNav extends React.Component {
+
+  render() {
+
+    const { className } = this.props;
+    const { homePath } = this.props;
+    const { tutorialProjectsPath } = this.props;
+
+
+    return (
+      <nav className={className}>
+        <ul>
+          <li>
+            <Link to={homePath}>Home</Link>
+          </li>
+          <li>
+            <Link to={tutorialProjectsPath}>Tutorial Projects</Link>
+          </li>
+        </ul>
+      </nav>
+    );
+  }
+}
+
+const StyledMainNav = styled(MainNav)`
+  background: rgb(219, 112, 147);
+
+  & ul {
+        padding: 0;
+        margin: 0;
+      }
+`;
 
 function Home() {
   return (
     <div className="Home">
       <h1>Home</h1>
-    </div>
-  );
-}
-
-function App() {
-
-  return (
-    <div className="App">
-      <Router history={History}>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/react-router">React Router</Link>
-            </li>
-            <li>
-              <Link to="/data-fetching">Data Fetching</Link>
-            </li>
-            <li>
-              <Link to="/reactjs-org">Reactjs.org Tutorial</Link>
-            </li>
-            <li>
-              <Link to="/nasa-pic-of-the-day">Nasa Pic of the Day</Link>
-            </li>
-          </ul>
-        </nav>
-
-        <Switch>
-          <Route
-            exact
-            path="/"
-            component={Home}
-          />
-          <Route
-            exact
-            path="/react-router"
-            component={RouterApp}
-          />
-          <Route
-            exact
-            path="/data-fetching"
-            component={DataFetching}
-          />
-          <Route
-            exact
-            path="/reactjs-org"
-            component={ReactJsOrg}
-          />
-          <Route
-            exact
-            path="/nasa-pic-of-the-day"
-            component={NasaPics}
-          />
-        </Switch>
-      </Router>
     </div>
   );
 }
