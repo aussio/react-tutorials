@@ -4,9 +4,9 @@ import {
   Link,
   Route,
 } from "react-router-dom";
-import styled from 'styled-components';
+import styles from './App.module.css';
 
-import StyledTutorials from './Tutorials';
+import Tutorials from './Tutorials';
 
 class App extends React.Component {
 
@@ -16,12 +16,11 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <StyledMainNav
+      <div className={styles.entirePage}>
+        <Header
           homePath={this.homePath}
           tutorialProjectsPath={this.tutorialProjectsPath}
         />
-
         <Switch>
           <Route
             exact
@@ -30,7 +29,7 @@ class App extends React.Component {
           />
           <Route
             path={this.tutorialProjectsPath}
-            render={() => <StyledTutorials pathPrefix={this.tutorialProjectsPath} />}
+            render={() => <Tutorials pathPrefix={this.tutorialProjectsPath} />}
           />
         </Switch>
       </div>
@@ -38,38 +37,32 @@ class App extends React.Component {
   }
 }
 
-class MainNav extends React.Component {
+class Header extends React.Component {
 
   render() {
 
-    const { className } = this.props;
     const { homePath } = this.props;
     const { tutorialProjectsPath } = this.props;
 
 
     return (
-      <nav className={className}>
-        <StyledNavLink to={homePath}>Home</StyledNavLink>
-        <StyledNavLink to={tutorialProjectsPath}>Tutorial Projects</StyledNavLink>
+      <nav className={styles.header}>
+        <Link
+          className={styles.link}
+          to={homePath}
+        >
+          Home
+        </Link>
+        <Link
+          className={styles.link}
+          to={tutorialProjectsPath}
+        >
+          Tutorial Projects
+        </Link>
       </nav>
     );
   }
 }
-
-const StyledMainNav = styled(MainNav)`
-  display: flex;
-  justify-content: flex-start;
-
-  background: rgb(219, 112, 147);
-`;
-
-const StyledNavLink = styled(Link)`
-  color: white;
-  font-weight: bold;
-  line-height: 3em;
-  text-decoration: none;
-  margin: 0em 2em;
-`;
 
 function Home() {
   return (

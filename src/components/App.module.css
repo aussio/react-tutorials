@@ -1,0 +1,19 @@
+.entirePage {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+
+  background: rgb(219, 112, 147);
+}
+
+.link {
+  color: white;
+  font-weight: bold;
+  line-height: 3em;
+  text-decoration: none;
+  margin: 0em 2em;
+}
